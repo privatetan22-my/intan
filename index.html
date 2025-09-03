@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Coffee</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <style>
+        /* Custom CSS untuk Animasi */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        .animate-fade-in-2s {
+            animation: fadeIn 2s ease-out 1s forwards;
+            opacity: 0; /* Ensures it starts invisible */
+        }
+
+        .animate-slide-up {
+            animation: slideUp 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+    <header class="bg-black bg-opacity-50 fixed w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-100">Brand Coffee</a>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:text-amber-400 transition-colors duration-300">Beranda</a></li>
+                <li><a href="#menu" class="hover:text-amber-400 transition-colors duration-300">Menu</a></li>
+                <li><a href="#galeri" class="hover:text-amber-400 transition-colors duration-300">Galeri</a></li>
+                <li><a href="#sejarah" class="hover:text-amber-400 transition-colors duration-300">Sejarah</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="h-screen flex items-center justify-center text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center animate-fade-in" style="background-image: url('https://source.unsplash.com/1600x900/?coffee-beans');"></div>
+            <div class="relative z-10 p-8 bg-black bg-opacity-60 rounded-lg">
+                <h1 class="text-5xl md:text-7xl font-bold text-amber-400 animate-slide-up">Selamat Datang di Brand Coffee</h1>
+                <p class="mt-4 text-xl md:text-2xl animate-fade-in-2s">Rasakan setiap tegukan, nikmati setiap cerita.</p>
+                <a href="#menu" class="mt-8 inline-block px-6 py-3 bg-amber-400 text-gray-900 font-semibold rounded-full hover:bg-amber-500 transition-colors duration-300 transform hover:scale-105">Lihat Menu</a>
+            </div>
+        </section>
+
+        <section id="menu" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-amber-400 mb-12">Menu Kami</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+                        <img src="esp.jpg" alt="Espresso" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold text-gray-100">Espresso</h3>
+                        <p class="text-gray-400 mt-2">Kopi pekat yang kaya rasa.</p>
+                        <p class="text-lg font-bold text-amber-400 mt-4">Rp 20.000</p>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+                        <img src="cappu.jpg" alt="Cappuccino" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold text-gray-100">Cappuccino</h3>
+                        <p class="text-gray-400 mt-2">Perpaduan seimbang antara espresso, susu, dan busa susu yang lembut.</p>
+                        <p class="text-lg font-bold text-amber-400 mt-4">Rp 25.000</p>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+                        <img src="caffe late.jpg" alt="Caffe Late" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="caffe latte">Caffe Latte</h3>
+                        <p class="text-gray-400 mt-2">Kopi susu klasik dengan lapisan tipis busa di atasnya.</p>
+                        <p class="text-lg font-bold text-amber-400 mt-4">Rp 28.000</p>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+                        <img src="caffe mocha.jpg" alt="Caffe Mocha" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold text-gray-100">Caffe Mocha</h3>
+                        <p class="text-gray-400 mt-2">Espresso, cokelat, dan susu. Pilihan sempurna untuk pecinta kopi manis.</p>
+                        <p class="text-lg font-bold text-amber-400 mt-4">Rp 30.000</p>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+                        <img src="americano.jpg" alt="Americano" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold text-gray-100">Americano</h3>
+                        <p class="text-gray-400 mt-2">Shot espresso yang diencerkan dengan air panas. Kuat dan menyegarkan.</p>
+                        <p class="text-lg font-bold text-amber-400 mt-4">Rp 22.000</p>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+                        <img src="iced coffe.jpg" alt="Iced Coffee" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold text-gray-100">Iced Coffee</h3>
+                        <p class="text-gray-400 mt-2">Kopi dingin yang pas untuk hari yang panas.</p>
+                        <p class="text-lg font-bold text-amber-400 mt-4">Rp 25.000</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeri" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-amber-400 mb-12">Galeri</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <img src="caffe.jpg" alt="Interior Coffee Shop" class="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="barista coffe.jpg" alt="Barista sedang membuat kopi" class="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="biji coffe.jpg" alt="Biji kopi" class="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="latte art.jpg" alt="Latte art" class="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="suasana.jpg" alt="Suasana coffee shop yang nyaman" class="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="mesin sangrai.jpg" alt="Mesin sangrai kopi" class="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="kopi dan buku.jpg" alt="Kopi dan buku" class="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                </div>
+            </div>
+        </section
+
+        <section id="sejarah" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-amber-400 mb-12">Sejarah Kopi</h2>
+                <div class="max-w-4xl mx-auto text-lg leading-relaxed text-gray-300">
+                    <p class="mb-4">Kisah kopi dimulai pada abad ke-9, di dataran tinggi Ethiopia. Menurut legenda, seorang gembala kambing bernama Kaldi menemukan pohon kopi setelah memperhatikan kambing-kambingnya menjadi sangat energik setelah memakan buah beri dari pohon tertentu.</p>
+                    <p class="mb-4">Dari sana, kopi menyebar ke semenanjung Arab, di mana ia pertama kali dibudidayakan secara sistematis. Pada abad ke-15, kopi mencapai Mekah dan Kairo, dan pada abad ke-16, ia menyebar ke seluruh Timur Tengah dan Persia. Kafe-kafe pertama mulai bermunculan di kota-kota besar, menjadi pusat sosial dan intelektual.</p>
+                    <p>Perjalanan kopi ke Eropa dimulai pada abad ke-17. Italia menjadi salah satu pintu masuk utama, dan kafe-kafe pertama di sana membuka jalan bagi budaya minum kopi yang kini kita kenal. Hingga hari ini, kopi adalah salah satu minuman paling populer di dunia.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black bg-opacity-70 py-8 text-center text-gray-400">
+        <p>&copy; 2025 Brand Coffee. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('bg-opacity-90', 'shadow-lg');
+                    header.classList.remove('bg-opacity-50');
+                } else {
+                    header.classList.remove('bg-opacity-90', 'shadow-lg');
+                    header.classList.add('bg-opacity-50');
+                }
+            });
+
+            const menuLinks = document.querySelectorAll('nav a[href^="#"]');
+
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - header.offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
